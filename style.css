@@ -1,0 +1,561 @@
+@import url('https://fonts.cdnfonts.com/css/hk-groteks');
+@import url(https://fonts.googleapis.com/css?family=Alata);
+@import url('https://fonts.cdnfonts.com/css/bauhaus-modern');
+@import url(https://fonts.googleapis.com/css?family=Amaranth);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 100px;
+}
+
+/* Button */
+
+.btn1 {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: royalblue;
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.btn1 span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid #eebbc3;
+}
+
+.btn1 span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+
+.btn1:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #eebbc3;
+}
+
+.btn1:hover {
+    color: white;
+}
+
+.btn1:active span::before {
+    background: #eebbc3;
+}
+
+/* END */
+
+.hero2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* Button 2 */
+.btn2 {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #232946;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+}
+
+.btn2::before,
+.btn2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.btn2::before {
+    left: -10px;
+    background: #b8c1ec;
+}
+
+.btn2::after {
+    right: -10px;
+    background: #eebbc3;
+}
+
+.btn2:hover::before,
+.btn2:hover::after {
+    width: 58%;
+}
+
+.btn2:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+}
+
+.btn2 span {
+    color: #232946;
+    font-size: 18px;
+    transition: all 0.3s ease-in;   
+}
+
+/* END2 */
+
+section p {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    font-family: 'Alata';
+}
+
+section h1 {
+    font-size: 39px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Alata';
+    font-weight: 100;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.research {
+    width: 270px;
+    height: 380px;
+    margin: 25px;
+    border-radius: 15px;
+    transition: all 0.3s;
+}
+
+.research .btn {
+    display: block;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #080F2C;
+    text-decoration: none;
+    border-radius: 30px;
+    color: #F3F4F4;
+    font-family: 'HK Grotesk';
+}
+
+.research:hover {
+    transform: scale(1.20);
+}
+
+.rq {
+    width: 100%;
+    height: 100dvh;
+}
+
+.questions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.context {
+    border: 2px solid #080F2C;
+    background-color: #080F2C;
+    height: 280px;
+    width: 30%;
+    margin: 50px;
+    padding: 15px;
+}
+
+.second {
+    height: 330px;
+}
+
+.context h2 {
+    color: white;
+    font-family: 'HK Grotesk';
+    font-size: 22px;
+}
+
+.context P {
+    color: white;
+    font-family: 'Alata';
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.ti h1 {
+    font-family: 'HK Grotesk';
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffff;
+}
+
+.bgm {
+    position: absolute;
+    right: 0;
+    bottom: 20;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .bgm {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .bgm {
+        width: auto;
+        height: 100dvh;
+    }
+}
+
+.signa {
+    background-image: url(img/sot.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100dvh;
+}
+
+/* Button 3 */
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+}
+
+.button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
+
+/* End3 */
+
+
+/* JOURNEY CSS */
+body {
+    background-image: linear-gradient(to right bottom, #b8c1ec, #232946);
+}
+
+.timeline {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    color: #ffffff;
+}
+
+.timeline__component {
+    margin: 0 20px 20px 20px;
+}
+
+.timeline__component--bg {
+    padding: 1.5em;
+    background:  #9DB3C1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.timeline-left {
+    background-color: #001524;
+}
+
+/* LEAVE TILL LAST */
+.timeline__component--bottom {
+    margin-bottom: 0;
+}
+
+.timeline__middle {
+    position: relative;
+    background: #ffffff;
+}
+
+.timeline__point {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+/* LEAVE TILL LAST */
+.timeline__point--bottom {
+    top: initial;
+    bottom: 0;
+}
+
+.timeline__date--right {
+    text-align: right;
+    font-family: 'Alata';
+}
+
+.timeline__date {
+    font-family: 'Alata';
+    font-size: 12px;
+}
+
+.timeline__title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Amaranth';
+}
+
+.timeline__paragraph {
+    line-height: 1.5;
+    font-family: 'Alata';
+    font-weight: 100;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+  
+.gg {
+    font-family: 'HK Grotesk';
+    font-size: 39px;
+    color: #080F2C;
+    padding: 20px;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: white;
+}
+
+/* Button 4 */
+.btn4 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #232946;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn4 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn4 span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+.btn4:hover span {
+    padding-right: 15px;
+}
+
+.btn4:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* End4 */
+
+.maint {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promotional {
+    padding-top: 190px;
+}
+
+.content {
+    border: 2px solid white;
+    height: 250px;
+    padding: 15px;
+}
+
+.content h1 {
+    font-size: 20px;
+    font-family: 'Alata';
+    color: #ffff;
+    text-align: center;
+}
+
+.content p {
+    font-size: 17px;
+    font-family: 'HK Grotesk';
+    color: #D4D8F0;
+}
+
+/* Team CSS */
+
+.container2 {
+    height: 100dvh;
+    background-color: #9DB3C1;
+    overflow: hidden;
+}
+
+.container2 .row {
+    height: 100%;
+    /*   width: 100%; */
+    /* 	display: flex;
+        justify-content: center;
+        align-items: center; */
+}
+
+.container2 .row .box-slider {
+    position: relative;
+    height: 85%;
+    /*   width: 100%; */
+    padding: 40px 80px;
+    display: flex;
+    gap: 15px;
+}
+
+.container2 .row .box-slider .img {
+    position: relative;
+    height: 100%;
+    width: calc(100% / 5);
+    overflow: hidden;
+    transition: 0.3s linear;
+    transform: skewX(5deg);
+}
+
+.container2 .row .box-slider .img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 200ms linear;
+}
+
+.container2 .row .box-slider .img img {
+    height: 100%;
+    width: fit-content;
+    object-fit: cover;
+}
+
+.info {
+    color: black;
+    font-family: 'Alata';
+    font-size: 14px;
+}
+
+.container2 .row .box-slider .img .info {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    transition: bottom 300ms linear;
+}
+
+.container2 .row .box-slider .img:hover .info {
+    bottom: 0;
+}
+
+.container2 .row .box-slider .img:hover {
+    width: calc(100% / 2);
+}
+
+.container2 .row .box-slider .img:hover::before {
+    background: rgba(0, 0, 0, 0);
+}
